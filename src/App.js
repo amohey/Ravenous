@@ -11,7 +11,6 @@ class App extends React.Component {
         super(props);
         this.state = {
             businesses: [],
-            errors:[]
         };
         this.searchYelp=this.searchYelp.bind(this)
     }
