@@ -2,6 +2,7 @@
 // Project: ravenous
 // Date: 07/06/2019
 const apiKey = '7DYQoYUTwlnJsrDMuAxNR4htQU8Gcy_dq0TQo8CUU8gRU-SRjmd7zHLFnMJe3SqoUCZ0IKE8Dx9lPgNpwzVGOyxA-2SyUUtYL-BBai_S1z21gvBig4DEkEp376P6XHYx';
+console.log(apiKey);
 
 const Yelp = {
     search(term, location, sortBy) {
