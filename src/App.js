@@ -5,6 +5,7 @@ import './components/SearchBar/SearchBar';
 import SearchBar from "./components/SearchBar/SearchBar";
 import BusinessList from "./components/BusinessList/BusinessList";
 import Yelp from './util/yelp';
+import Error from './components/Error_Rendering/Error';
 
 class App extends React.Component {
     constructor(props) {
@@ -28,6 +29,7 @@ class App extends React.Component {
                 <h1>ravenous</h1>
                 <SearchBar searchYelp={this.searchYelp}/>
                 <BusinessList businesses={this.state.businesses}/>
+                <Error Error={this.state.businesses.message ? JSON.parse(this.state.businesses.message).description :null}/>
             </div>
         );
     }

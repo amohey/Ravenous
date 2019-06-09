@@ -17,12 +17,7 @@ class BusinessList extends React.Component {
               })}
           </div>
       );}catch(error){
-          return (
-              <div className="BusinessList">
-                  <h1>Oops, unresolved error</h1>
-                  <h1>{this.props.error}</h1>
-              </div>
-          )
+          return null
       }
     }
 }
