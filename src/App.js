@@ -31,14 +31,35 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-            <div className="App">
-                <h1>ravenous</h1>
-                <SearchBar searchYelp={this.searchYelp}/>
-                <BusinessList businesses={this.state.businesses}/>
-                <Error Error={this.state.businesses.message ? JSON.parse(this.state.businesses.message).description : null}/>
-            </div>
-        );
+        if (this.state.businesses.message) {
+            return (
+                <div className="App">
+                    <h1>ravenous</h1>
+                    <SearchBar searchYelp={this.searchYelp}/>
+                    <BusinessList businesses={this.state.businesses}/>
+                    <Error Error={JSON.parse(this.state.businesses.message).description}/>
+                </div>
+            );
+        }
+        if(this.state.businesses.length===0){
+            return (
+                <div className="App">
+                    <h1>ravenous</h1>
+                    <SearchBar searchYelp={this.searchYelp}/>
+                    <BusinessList businesses={this.state.businesses}/>
+                    <Error Error={"No Results Found !"}/>
+                </div>
+            );
+        }else {
+            return (
+                <div className="App">
+                    <h1>ravenous</h1>
+                    <SearchBar searchYelp={this.searchYelp}/>
+                    <BusinessList businesses={this.state.businesses}/>
+                    <Error Error={null}/>
+                </div>
+            );
+        }
     }
 }
 
