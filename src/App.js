@@ -17,7 +17,14 @@ class App extends React.Component {
     }
 
     searchYelp(term, location, sortBy) {
-        // console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+
+        if (location!==null && location.length<1) {
+            location = null;
+        }
+        if (term!==null && term.length<1) {
+            term = null;
+        }
+
         Yelp.search(term, location, sortBy).then(businesses => {
             this.setState({businesses: businesses})
         })
@@ -29,7 +36,7 @@ class App extends React.Component {
                 <h1>ravenous</h1>
                 <SearchBar searchYelp={this.searchYelp}/>
                 <BusinessList businesses={this.state.businesses}/>
-                <Error Error={this.state.businesses.message ? JSON.parse(this.state.businesses.message).description :null}/>
+                <Error Error={this.state.businesses.message ? JSON.parse(this.state.businesses.message).field  + '\n' + JSON.parse(this.state.businesses.message).description :null}/>
             </div>
         );
     }

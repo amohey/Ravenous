@@ -9,8 +9,8 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            term: '',
-            location: '',
+            term: null,
+            location: null,
             sortBy: 'best_match'
         };
         this.sortByOptions = {
