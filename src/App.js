@@ -13,20 +13,23 @@ class App extends React.Component {
         this.state = {
             businesses: [],
         };
-        this.searchYelp=this.searchYelp.bind(this)
+        this.searchYelp = this.searchYelp.bind(this)
     }
 
     searchYelp(term, location, sortBy) {
 
-        if (location!==null && location.length<1) {
+        if (location !== null && location.length < 1) {
             location = null;
         }
-        if (term!==null && term.length<1) {
+        if (term !== null && term.length < 1) {
             term = null;
         }
 
         Yelp.search(term, location, sortBy).then(businesses => {
-            this.setState({businesses: businesses})
+            this.setState({
+                businesses: businesses,
+                search: 'triggered'
+            })
         })
     }
 
@@ -41,22 +44,21 @@ class App extends React.Component {
                 </div>
             );
         }
-        if(this.state.businesses.length===0){
+        if (this.state.businesses.length === 0) {
             return (
                 <div className="App">
                     <h1>ravenous</h1>
                     <SearchBar searchYelp={this.searchYelp}/>
                     <BusinessList businesses={this.state.businesses}/>
-                    <Error Error={"No Results Found !"}/>
+                    <Error Error={this.state.search ? "No Results Found !" : null}/>
                 </div>
             );
-        }else {
+        } else {
             return (
                 <div className="App">
                     <h1>ravenous</h1>
                     <SearchBar searchYelp={this.searchYelp}/>
                     <BusinessList businesses={this.state.businesses}/>
-                    <Error Error={null}/>
                 </div>
             );
         }
