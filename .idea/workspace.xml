@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36d2c892-5b1d-4be2-808c-3ee3fbdaee5b" name="Default Changelist" comment="implemented error handling and error rendering component v1">
+    <list default="true" id="36d2c892-5b1d-4be2-808c-3ee3fbdaee5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/yelp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/yelp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="221">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -32,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Error_Rendering/Error.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="102">
               <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
             </state>
           </provider>
@@ -46,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Business/Business.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="255">
               <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
               <folding>
                 <element signature="e#64#90#0" expanded="true" />
@@ -58,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BusinessList/BusinessList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
+            <state relative-caret-position="85">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#64#90#0" expanded="true" />
@@ -70,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/SearchBar/SearchBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+            <state relative-caret-position="-544">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#64#90#0" expanded="true" />
@@ -83,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/yelp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="243">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -113,6 +112,7 @@
       <find>sortbychange</find>
       <find>keys</find>
       <find>searchYelp</find>
+      <find>handleSortByChange</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,10 +139,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="170" />
-    <option name="y" value="50" />
-    <option name="width" value="3500" />
-    <option name="height" value="1960" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,7 +162,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,6 +176,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -230,7 +231,9 @@
       <workItem from="1560112782077" duration="813000" />
       <workItem from="1560113609528" duration="760000" />
       <workItem from="1560114391819" duration="1591000" />
-      <workItem from="1560116475810" duration="5662000" />
+      <workItem from="1560116475810" duration="5778000" />
+      <workItem from="1560157693353" duration="108000" />
+      <workItem from="1560157819302" duration="1332000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1559383268178</created>
@@ -267,11 +270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560112306487</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implemented search on pressing enter in business / location fields">
+      <created>1560122238098</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560122238098</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60077000" />
+    <option name="totallyTimeSpent" value="61633000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,16 +293,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25231177" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25198728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32760897" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3268206" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989432" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,7 +311,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32893" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32893" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24949698" />
@@ -335,7 +345,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="ravenous as per code academy standard" />
     <MESSAGE value="implemented error handling and error rendering component v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented error handling and error rendering component v1" />
+    <MESSAGE value="implemented search on pressing enter in business / location fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented search on pressing enter in business / location fields" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/reset.css">
@@ -413,19 +424,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Error_Rendering/Error.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="102">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Business/Business.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="255">
           <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
           <folding>
             <element signature="e#64#90#0" expanded="true" />
@@ -435,7 +456,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BusinessList/BusinessList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
+        <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#64#90#0" expanded="true" />
@@ -445,25 +466,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/yelp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SearchBar/SearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+        <state relative-caret-position="-544">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#64#90#0" expanded="true" />
