@@ -1,8 +1,7 @@
 // Author: Ahmed Mohey
 // Project: ravenous
 // Date: 07/06/2019
-const apiKey = '7DYQoYUTwlnJsrDMuAxNR4htQU8Gcy_dq0TQo8CUU8gRU-SRjmd7zHLFnMJe3SqoUCZ0IKE8Dx9lPgNpwzVGOyxA-2SyUUtYL-BBai_S1z21gvBig4DEkEp376P6XHYx';
-console.log(apiKey);
+const apiKey = process.env.REACT_APP_API_Keys;
 
 const Yelp = {
     search(term, location, sortBy) {
@@ -12,13 +11,12 @@ const Yelp = {
                     Authorization: `Bearer ${apiKey}`
                 }
             }).then(response => {
-                    return response.json()
+            return response.json()
         }).then(jsonResponse => {
-            console.log(jsonResponse);
-            if(jsonResponse.error){
-                throw new Error(JSON.stringify(jsonResponse.error))
-            }
-            else if (jsonResponse.businesses) {
+                console.log(jsonResponse);
+                if (jsonResponse.error) {
+                    throw new Error(JSON.stringify(jsonResponse.error))
+                } else if (jsonResponse.businesses) {
                     return jsonResponse.businesses.map(business => {
                             return {
                                 id: business.id,
@@ -41,7 +39,7 @@ const Yelp = {
         ).catch(errors => {
             //console.log(errors);
             return errors;
-            })
+        })
     }
 
 };
